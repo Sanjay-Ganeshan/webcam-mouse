@@ -1,0 +1,6 @@
+deepspeech-0.5.1-models.tar.gz
+deepspeech_models/*
+!deepspeech_models/.gitkeep
+audio_snippets
+_models
+**__pycache__
