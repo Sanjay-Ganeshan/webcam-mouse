@@ -1,3 +1,39 @@
+# Get started
+Assuming you're using Anaconda & Python 3.7
+
+You'll need Tensorflow (CPU), Deepspeech v0.5.0a8 (CPU), Pytorch (GPU), PyAudio, OpenCV2, Pyautogui
+
+Should be as easy as:
+```bash
+pip3 install tensorflow deepspeech==0.5.0a8 opencv-python pyautogui
+conda install pyaudio
+conda install pytorch torchvision cudatoolkit=10.1 -c pytorch
+```
+
+You'll also need to download the language model weights from
+https://github.com/mozilla/DeepSpeech/releases/download/v0.5.1/deepspeech-0.5.1-models.tar.gz
+
+Extract & move the raw files to `deepspeech_models`
+
+
+To run, first start the Pose detection server, then the speech transcription server, then the mouse control
+```bash
+# In first terminal
+python pose_server.py --scale_factor 0.5
+# In 2nd terminal
+python socket_transcriber.py
+
+# In main (3rd) terminal
+python mouse_socket.py
+```
+
+To quit, alt-tab to the openCV window and press 'q', OR press ctrl+c on the speech server (when one dies all will die)
+
+# Original README
+
+This codebase was adapted from https://github.com/rwightman/posenet-pytorch.
+It also uses Deepspeech from Mozilla (https://github.com/mozilla/DeepSpeech)
+
 ## PoseNet Pytorch
 
 This repository contains a PyTorch implementation (multi-pose only) of the Google TensorFlow.js Posenet model.

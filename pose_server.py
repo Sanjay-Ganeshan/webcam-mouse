@@ -1,3 +1,5 @@
+# Modified by Julie, based on original "webcam_demo.py"
+
 import torch
 import cv2
 import time

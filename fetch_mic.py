@@ -1,3 +1,5 @@
+# Written by Julie
+
 import os
 import argparse
 import pyaudio

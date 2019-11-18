@@ -1,3 +1,5 @@
+# Written by Julie
+
 from mic_utils import close_mic, open_mic, record_clip
 from transcriber import make_model, infer
 import numpy as np

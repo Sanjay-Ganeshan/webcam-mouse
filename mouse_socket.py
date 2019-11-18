@@ -1,3 +1,5 @@
+# Written by Julie
+
 import socket
 import pyautogui
 import io
